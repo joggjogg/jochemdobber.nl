@@ -10,13 +10,21 @@
 </svelte:head>
 
 <section class="hero">
-	<h1>
-		Hi, my name is Jochem and I'm a<Typewriter
-			>{#each titles as title}
-				<div class="title">{title}</div>
-			{/each}</Typewriter
-		>
-	</h1>
+	<div class="description">
+		<h1>
+			Hi, my name is Jochem and I'm a<Typewriter
+				>{#each titles as title}
+					<div class="title">{title}</div>
+				{/each}</Typewriter
+			>
+		</h1>
+		<p>Want to follow my adventure? Sign up for my newsletter!</p>
+		<form action="">
+			<input type="email" name="email" id="email">
+			<button type="submit">Sign up</button>
+		</form>
+	</div>
+
 	<div class="image">
 		<img src="hero.png" alt="Jochem Dobber relay" />
 	</div>
@@ -35,13 +43,37 @@
 		border-radius: 10px;
 	}
 
-	.title {
-		color: var(--accent-color)
+	h1 {
+		text-align: left;
 	}
 
-	h1 {
-		flex: 1 0 0;
-		text-align: left;
+	.title {
+		color: var(--accent-color);
+	}
+
+	.description {
+		display: flex;
+		flex-direction: column;
+	}
+
+	form {
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+	}
+
+	input {
+		padding: 15px;
+		border: none;
+		border-radius: 10px;
+	}
+
+	button {
+		padding: 15px;
+		border: none;
+		color: var(--pure-white);
+		background-color: var(--accent-color);
+		border-radius: 10px;
 	}
 
 	.image {
