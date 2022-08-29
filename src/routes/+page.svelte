@@ -32,7 +32,7 @@
 
 <style>
 	.hero {
-		background-color: var(--background);
+		background-color: var(--tertiary-color);
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -48,7 +48,7 @@
 	}
 
 	.title {
-		color: var(--accent-color);
+		color: var(--pure-white);
 	}
 
 	.description {
