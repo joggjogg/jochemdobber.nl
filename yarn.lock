@@ -1819,6 +1819,7 @@ __metadata:
     svelte: ^3.46.0
     svelte-check: ^2.7.1
     svelte-preprocess: ^4.10.6
+    svelte-typewriter: ^3.0.4
     tslib: ^2.3.1
     typescript: ^4.7.4
     vite: ^3.0.8
@@ -2899,6 +2900,15 @@ __metadata:
     typescript:
       optional: true
   checksum: 51a0820c14bcc411ddf3b1cf4c772e73873626ed0b6c54dfca9e06bd6a6b22c9502436df3f1a4dab9eb3a404bba95002fd70cadea29a84fc36da3071309a8b91
+  languageName: node
+  linkType: hard
+
+"svelte-typewriter@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "svelte-typewriter@npm:3.0.4"
+  peerDependencies:
+    svelte: ">=3.47.x"
+  checksum: 4e603acc9960d8f18599d6d68e6a9a05b0223fe8feaec0d713ff28eae03bd183bc1e74dd52999b2aa20afe14dfa877c16acd43f0572c58c0dba82c9f06f1f02d
   languageName: node
   linkType: hard
 
