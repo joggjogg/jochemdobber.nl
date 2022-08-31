@@ -13,12 +13,4 @@
 </footer>
 
 <style>
-	main {
-		
-	}
-
-	footer {
-	
-	}
-
 </style>
