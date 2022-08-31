@@ -3,16 +3,16 @@
 		"Open Sans", "Helvetica Neue", sans-serif;
 	--font-mono: "Fira Mono", monospace;
 	--pure-white: #ffffff;
-	--primary-color: #e27f3c;
-	--secondary-color: #d79263;
-	--tertiary-color: #d4a586;
-	--accent-color: #f66b0e;
-	--heading-color: #1e2029;
-	--text-color: #1e2029;
+	--primary-color: #d4a586;
+	--accent-color: #f0780c;
+	--heading-color: #000000;
+	--text-color: #000000;
 	--background: #e3e3e3;
 	--background-without-opacity: rgba(255, 255, 255, 0.7);
 	--column-width: 42rem;
-	--column-margin-top: 4rem;
+	--column-margin-vertical: 2rem;
+	--column-margin-horizontal: 4rem;
+	--container-padding: 4rem
 }
 
 body {

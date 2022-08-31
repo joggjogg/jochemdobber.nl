@@ -20,7 +20,7 @@
 		</h1>
 		<p>Want to follow my adventure? Sign up for my newsletter!</p>
 		<form action="">
-			<input type="email" name="email" id="email">
+			<input type="email" name="email" id="email" />
 			<button type="submit">Sign up</button>
 		</form>
 	</div>
@@ -32,7 +32,7 @@
 
 <style>
 	.hero {
-		background-color: var(--tertiary-color);
+		background-color: var(--primary-color);
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -54,12 +54,14 @@
 	.description {
 		display: flex;
 		flex-direction: column;
+		z-index: 1;
 	}
 
 	form {
 		display: flex;
 		flex-direction: row;
 		gap: 10px;
+		width: 100%;
 	}
 
 	input {
@@ -80,6 +82,9 @@
 		margin-top: -5em;
 		margin-bottom: -4em;
 		width: 60%;
+		display: flex;
+		justify-content: flex-end;
+		z-index: 0;
 	}
 
 	img {
