@@ -1,7 +1,10 @@
 <script lang="ts">
 	import Typewriter from './Typewriter.svelte';
 	import LayeredWaves from './layered-waves-haikei-3.svg';
-	import Paris2024 from './danvernonnbmunichday1-101.jpeg';
+	import Paris2024 from './relay_team.jpeg';
+	import Nationals from './nationals.jpeg'
+	import Beach from './beach.jpeg'
+
 	const titles = ['Olympic Medalist', 'Web Developer', 'Puma Athlete'];
 </script>
 
@@ -22,7 +25,7 @@
 		<p>Want to follow my adventure? Sign up for my newsletter!</p>
 		<form action="">
 			<input type="email" name="email" id="email" />
-			<button type="submit" />
+			<button class="call-to-action" type="submit">Send</button>
 		</form>
 	</div>
 
@@ -36,7 +39,27 @@
 <section class="cards">
 	<div class="card">
 		<img src={Paris2024} alt="Paris 2024" />
-		<div class="description">Parijs 2024</div>
+		<div class="description">
+			<h2>Paris 2024</h2>
+			<p>This will be my second Olympics. Check out my mission for Paris 2024.</p>
+			<button class="call-to-action">Bekijk</button>
+		</div>
+	</div>
+	<div class="card">
+		<img src={Nationals} alt="National Championships 2022" />
+		<div class="description">
+			<h2>Become a sponsor</h2>
+			<p>Want to become part of my team? 🤙</p>
+			<button class="call-to-action">Bekijk</button>
+		</div>
+	</div>
+	<div class="card">
+		<img src={Beach} alt="Beach" />
+		<div class="description">
+			<h2>Latest blog</h2>
+			<p>Check out my latest blog!</p>
+			<button class="call-to-action">Bekijk</button>
+		</div>
 	</div>
 </section>
 
@@ -83,23 +106,14 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		gap: 10px;
 	}
 
 	input {
-		width: 150px;
+		width: 100%;
 		border: none;
 		border-radius: 10px;
 		padding: 0.5rem 1rem;
-	}
-
-	button {
-		flex-grow: 1;
-		width: fit-content;
-		border: none;
-		color: var(--pure-white);
-		background-color: var(--accent-color);
-		border-radius: 10px;
+		margin-right: .5rem;
 	}
 
 	.image {
@@ -127,12 +141,12 @@
 
 	.cards {
 		width: 100%;
-		height: 500px;
 		box-sizing: border-box;
 		background-color: var(--secondary-color);
 		padding: var(--column-margin-vertical) var(--column-margin-horizontal);
 		display: flex;
 		flex-direction: column;
+		gap: 4rem;
 	}
 
 	.card {
@@ -140,27 +154,38 @@
 		width: 100%;
 		border-radius: 10px;
 		background-color: var(--pure-white);
-		height: 200px;
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-end;
-		overflow: hidden;
+		filter: drop-shadow(0 30px 45px rgba(22, 22, 22, 15%))
 	}
 
 	.card img {
-		height: 100%;
+		height: 200px;
 		object-fit: cover;
-		object-position: 0 -1%;
+		border-top-left-radius: inherit;
+		border-top-right-radius: inherit;
 	}
 
 	.card .description {
+		box-sizing: border-box;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-between;
-		background-color: var(--primary-color);
-		padding: 1rem 1.5rem;
+		align-content: center;
+		padding: 1rem;
+		bottom: 0;
 		width: 100%;
-		z-index: 1;
+		z-index: 10;
 		font-weight: 500;
+		color: var(--pure-white);
+	}
+
+	.card .description h2 {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
+	.card .description p {
+		width: 100%;
 	}
 </style>
