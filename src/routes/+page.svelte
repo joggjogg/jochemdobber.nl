@@ -2,8 +2,8 @@
 	import Typewriter from './Typewriter.svelte';
 	import LayeredWaves from './layered-waves-haikei-3.svg';
 	import Paris2024 from './relay_team.jpeg';
-	import Nationals from './nationals.jpeg'
-	import Beach from './beach.jpeg'
+	import Nationals from './nationals.jpeg';
+	import Beach from './beach.jpeg';
 
 	const titles = ['Olympic Medalist', 'Web Developer', 'Puma Athlete'];
 </script>
@@ -37,7 +37,7 @@
 <div class="divider"><img src={LayeredWaves} alt="Layeredwaves" /></div>
 
 <section class="cards">
-	<div class="card">
+	<div class="card hvr-grow">
 		<img src={Paris2024} alt="Paris 2024" />
 		<div class="description">
 			<h2>Paris 2024</h2>
@@ -45,7 +45,7 @@
 			<button class="call-to-action">Bekijk</button>
 		</div>
 	</div>
-	<div class="card">
+	<div class="card hvr-grow">
 		<img src={Nationals} alt="National Championships 2022" />
 		<div class="description">
 			<h2>Become a sponsor</h2>
@@ -53,7 +53,7 @@
 			<button class="call-to-action">Bekijk</button>
 		</div>
 	</div>
-	<div class="card">
+	<div class="card hvr-grow">
 		<img src={Beach} alt="Beach" />
 		<div class="description">
 			<h2>Latest blog</h2>
@@ -113,7 +113,7 @@
 		border: none;
 		border-radius: 10px;
 		padding: 0.5rem 1rem;
-		margin-right: .5rem;
+		margin-right: 0.5rem;
 	}
 
 	.image {
@@ -156,7 +156,22 @@
 		background-color: var(--pure-white);
 		display: flex;
 		flex-direction: column;
-		filter: drop-shadow(0 30px 45px rgba(22, 22, 22, 15%))
+		filter: drop-shadow(0 30px 45px rgba(22, 22, 22, 15%));
+
+		will-change: filter;
+		vertical-align: middle;
+		-webkit-transform: perspective(1px) translateZ(0);
+		transform: perspective(1px) translateZ(0);
+		-webkit-transition-duration: 0.3s;
+		transition-duration: 0.3s;
+		-webkit-transition-property: transform;
+		transition-property: transform;
+	}
+
+	.card:hover, .card:focus, .card:active {
+		-webkit-transform: scale(1.05);
+		transform: scale(1.05);
+		filter: drop-shadow(0 30px 45px rgba(22, 22, 22, 15%));
 	}
 
 	.card img {
