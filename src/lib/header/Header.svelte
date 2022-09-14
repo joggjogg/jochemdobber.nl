@@ -18,9 +18,25 @@
 
 <style>
 	header {
+		position: fixed;
+		bottom: 0;
+		margin-bottom: -;
+		width: 100%;
+		box-sizing: border-box;
+		/* From https://css.glass */
+		background: rgba(255, 255, 255, 0.2);
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		border-bottom: none;
+		z-index: 10;
 		display: flex;
 		justify-content: space-between;
-		margin: var(--column-margin-vertical) var(--column-margin-horizontal);
+		border-top-left-radius: 10px;
+		padding: .5rem 1rem
 	}
 
 	nav {

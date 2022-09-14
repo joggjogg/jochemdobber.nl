@@ -109,7 +109,7 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		height: 80vh;
-		margin: 0 var(--column-margin-horizontal);
+		margin: var(--column-margin-vertical) var(--column-margin-horizontal);
 		border-radius: 10px;
 		padding: 1rem 0;
 	}
