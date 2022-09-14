@@ -1,16 +1,12 @@
 <script lang="ts">
 	import Typewriter from './Typewriter.svelte';
-	import LayeredWaves from './layered-waves-haikei-3.svg';
-	import Paris2024 from './relay_team.jpeg';
-	import Nationals from './nationals.jpeg';
-	import Beach from './beach.jpeg';
 
 	const titles = ['Olympic Medalist', 'Web Developer', 'Puma Athlete'];
 </script>
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Jochem Dobber website" />
+	<meta name="description" content="Jochem Dobber" />
 </svelte:head>
 
 <section class="hero">
@@ -34,11 +30,11 @@
 	</div>
 </section>
 
-<div class="divider"><img src={LayeredWaves} alt="Layeredwaves" /></div>
+<div class="divider"><img src="/vectors/layered-waves-haikei-3.svg" alt="Layeredwaves" /></div>
 
 <section class="cards">
 	<div class="card hvr-grow">
-		<img src={Paris2024} alt="Paris 2024" />
+		<img src="/images/relay_team.jpeg" alt="Paris 2024" />
 		<div class="description">
 			<h2>Paris 2024</h2>
 			<p>This will be my second Olympics. Check out my mission for Paris 2024.</p>
@@ -46,7 +42,7 @@
 		</div>
 	</div>
 	<div class="card hvr-grow">
-		<img src={Nationals} alt="National Championships 2022" />
+		<img src="/images//nationals.jpeg" alt="National Championships 2022" />
 		<div class="description">
 			<h2>Become a sponsor</h2>
 			<p>Want to become part of my team? 🤙</p>
@@ -54,11 +50,52 @@
 		</div>
 	</div>
 	<div class="card hvr-grow">
-		<img src={Beach} alt="Beach" />
+		<img src="/images/beach.jpeg" alt="Beach" />
 		<div class="description">
 			<h2>Latest blog</h2>
-			<p>Check out my latest blog!</p>
+			<p>Check out my latest blog.</p>
 			<button class="call-to-action">Bekijk</button>
+		</div>
+	</div>
+</section>
+
+<section class="brands">
+	<h2>These brands support me</h2>
+	<div class="brands__wrapper">
+		<div class="brands__row">
+			<div class="brands__item">
+				<img class="brands__logo" src="/vectors/puma-logo.svg" alt="Puma" />
+			</div>
+		</div>
+
+		<div class="brands__row">
+			<div class="brands__item">
+				<img class="brands__logo" src="/images/coffeeclick.jpg" alt="CoffeeClick" />
+			</div>
+			<div class="brands__item">
+				<img class="brands__logo" src="/images/nedflex.png" alt="Nedflex" />
+			</div>
+		</div>
+
+		<div class="brands__row">
+			<div class="brands__item">
+				<img class="brands__logo" src="/vectors/bdo.svg" alt="BDO" />
+			</div>
+			<div class="brands__item">
+				<img class="brands__logo" src="/images/suomi.png" alt="AV Suomi" />
+			</div>
+			<div class="brands__item">
+				<img class="brands__logo" src="/images/rene-kops.png" alt="Rene Kops" />
+			</div>
+		</div>
+	</div>
+
+	<h3>Recovery partner</h3>
+	<div class="brands__wrapper">
+		<div class="brands__row">
+			<div class="brands__item">
+				<img class="brands__logo" src="/vectors/amplify.svg" alt="Amplify" />
+			</div>
 		</div>
 	</div>
 </section>
@@ -168,7 +205,9 @@
 		transition-property: transform;
 	}
 
-	.card:hover, .card:focus, .card:active {
+	.card:hover,
+	.card:focus,
+	.card:active {
 		-webkit-transform: scale(1.05);
 		transform: scale(1.05);
 		filter: drop-shadow(0 30px 45px rgba(22, 22, 22, 15%));
@@ -202,5 +241,50 @@
 
 	.card .description p {
 		width: 100%;
+	}
+
+	.brands {
+		padding: var(--column-margin-vertical) var(--column-margin-horizontal);
+		display: flex;
+		flex-direction: column;
+	}
+
+	.brands h2 {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.brands h3 {
+		margin-bottom: 3rem;
+	}
+
+	.brands__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+		margin-bottom: 2rem;
+	}
+
+	.brands__row {
+		display: flex;
+		flex: 1;
+		flex-wrap: wrap;
+		gap: 3rem;
+	}
+
+	.brands__item {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	img.brands__logo {
+		width: 100%;
+
+	}
+
+	.brands h3 {
+		text-align: center;
 	}
 </style>
