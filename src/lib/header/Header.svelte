@@ -20,7 +20,6 @@
 	header {
 		position: fixed;
 		bottom: 0;
-		margin-bottom: -;
 		width: 100%;
 		box-sizing: border-box;
 		/* From https://css.glass */
@@ -36,7 +35,7 @@
 		display: flex;
 		justify-content: space-between;
 		border-top-left-radius: 10px;
-		padding: .5rem 1rem
+		padding: .5rem 2rem
 	}
 
 	nav {
